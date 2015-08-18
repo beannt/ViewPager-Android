@@ -343,7 +343,7 @@ public class ViewPager extends ViewGroup {
     /**
      * Used internally to monitor when adapters are switched.
      */
-    interface OnAdapterChangeListener {
+    public interface OnAdapterChangeListener {
         public void onAdapterChanged(PagerAdapter oldAdapter, PagerAdapter newAdapter);
     }
 
@@ -499,6 +499,10 @@ public class ViewPager extends ViewGroup {
 
     public int getOrientation() {
         return mOrientation;
+    }
+	
+	public void setOrientation(int orientation) {
+        mOrientation = orientation;
     }
 
     public boolean isOrientationHorizontal() {
